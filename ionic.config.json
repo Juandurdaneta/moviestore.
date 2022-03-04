@@ -1,0 +1,8 @@
+{
+  "name": "Moviestore.",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "97f1468f"
+}

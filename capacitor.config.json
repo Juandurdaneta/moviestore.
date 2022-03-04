@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Moviestore.",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
