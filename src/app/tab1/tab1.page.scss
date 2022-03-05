@@ -1,0 +1,47 @@
+ion-toolbar{
+    padding: 2.2%;
+    background-color: var(--ion-background-color);
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-primary{
+    color: var(--ion-color-secondary)
+}
+
+
+.card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+}
+
+.img-container{
+  height: 30%;
+  border-radius: 12px;
+  position: relative;
+  background-image: url('https://www.themoviedb.org/t/p/original/lOr9NKxh4vMweufMOUDJjJhCRHW.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  -webkit-box-shadow: inset 1px -15px 33px 4px #000000; 
+  box-shadow: inset 1px -15px 33px 4px #000000;
+}
+
+.img-container ion-text h5{
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+}
+
+ion-col img {
+    border-radius: 10px;
+}
