@@ -23,66 +23,89 @@
 
 <div class="d-flex ion-margin ion-margin-horizontal ">
   <ion-text color="light">Series Populares</ion-text>
-  <div><ion-icon class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
+  <div><ion-icon class='ion-margin-horizontal' color="secondary" name="chevron-forward-outline"></ion-icon></div>
 </div>
 
-<ion-grid class="ion-margin">
-  <ion-row>
-    <ion-col>
-        <img src="https://www.themoviedb.org/t/p/original/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg">
+
+<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    class="mySwiper ion-margin"
+  >
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg">
         <ion-text color="light">Euphoria</ion-text>
         <br/>
         <ion-text color="medium">Drama</ion-text>
-
-    </ion-col>
-    <ion-col>
+    </ng-template
+    ><ng-template swiperSlide>
       <img src="https://www.themoviedb.org/t/p/original/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg">
       <ion-text color="light">Peaky Blinders</ion-text>
       <br/>
       <ion-text color="medium">Drama</ion-text>
-    </ion-col>
-    <ion-col>
+    </ng-template
+    ><ng-template swiperSlide>
       <img src="https://www.themoviedb.org/t/p/original/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg">
       <ion-text color="light">The book of Boba Fett</ion-text>
       <br/>
       <ion-text color="medium">Aventura</ion-text>
-    </ion-col>
-    <!-- <ion-col>
-      <img src="https://www.themoviedb.org/t/p/original/sGVCWtLG37mLOhl11qQVrjKsDzx.jpg">
-    </ion-col> -->
-  </ion-row>
-</ion-grid>
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/fezw8QjwqXyhb3gVk4jNZmr2bbl.jpg">
+      <ion-text color="light">Vikings</ion-text>
+      <br/>
+      <ion-text color="medium">Accion</ion-text>  
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg">
+      <ion-text color="light">Cobra Kai</ion-text>
+      <br/>
+      <ion-text color="medium">Aventura</ion-text>  
+    </ng-template>
+  </swiper>
+
 
 <div class="ion-margin d-flex ion-margin-horizontal">
   <ion-text color="light">Peliculas Populares</ion-text>
-  <div><ion-icon class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
-
+  <div><ion-icon color="secondary" class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
 </div>
 
-<ion-grid class="ion-margin">
-  <ion-row>
-    <ion-col>
-        <img src="https://www.themoviedb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg">
-        <ion-text color="light">Spider-Man</ion-text>
-        <br/>
-        <ion-text color="medium">Accion</ion-text>
-    </ion-col>
-
-    <ion-col>
+<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    class="mySwiper ion-margin"
+  >
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg">
+      <ion-text color="light">Spider-Man</ion-text>
+      <br/>
+      <ion-text color="medium">Accion</ion-text>  
+    </ng-template
+    ><ng-template swiperSlide>
       <img src="https://www.themoviedb.org/t/p/original/3VFI3zbuNhXzx7dIbYdmvBLekyB.jpg">
       <ion-text color="light">The Batman</ion-text>
       <br/>
-      <ion-text color="medium">Accion</ion-text>
-    </ion-col>
-
-    <ion-col>
+      <ion-text color="medium">Accion</ion-text>  
+    </ng-template
+    ><ng-template swiperSlide>
       <img src="https://www.themoviedb.org/t/p/original/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg">
       <ion-text color="light">Encanto</ion-text>
       <br/>
-      <ion-text color="medium">Animacion</ion-text>
-    </ion-col>
- 
-  </ion-row>
-</ion-grid>
+      <ion-text color="medium">Animacion</ion-text>  
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/aq4Pwv5Xeuvj6HZKtxyd23e6bE9.jpg">
+      <ion-text color="light">The Kings Man</ion-text>
+      <br/>
+      <ion-text color="medium">Accion</ion-text>  
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://www.themoviedb.org/t/p/original/kZNHR1upJKF3eTzdgl5V8s8a4C3.jpg">
+      <ion-text color="light">Scream</ion-text>
+      <br/>
+      <ion-text color="medium">Terror</ion-text>  
+    </ng-template>
+  </swiper>
+
 
 </ion-content>
