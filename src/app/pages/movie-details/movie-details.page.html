@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>movie-details</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
 
-<ion-content>
+ 
+  <ion-toolbar slot="fixed" class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<div class="container" [style.backgroundImage]="'url('+ movie.background +')'">
+<!-- <ion-img src="{{movie.background}}"></ion-img> -->
+
+<ion-text color="light">
+  <h5>{{movie.title}}</h5>
+</ion-text>
+
+<ion-text color="medium">
+  <h6>{{movie.genre}}</h6>
+</ion-text>
+</div>
 
 </ion-content>

@@ -30,10 +30,12 @@
  
     
     <ng-template swiperSlide *ngFor='let movie of movies' >
-      <img src="{{movie.poster}}">
-      <ion-text color="light">{{movie.title}}</ion-text>
-      <br/>
-      <ion-text color="medium">{{movie.genre}}</ion-text>
+      <div [routerLink]="['/movie-details', movie.id]">
+        <img src="{{movie.poster}}">
+        <ion-text color="light">   {{movie.title}} </ion-text>
+        <br/>
+     </div>
+        <ion-text color="medium">{{movie.genre}}</ion-text>
     </ng-template>  
   
 
