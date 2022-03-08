@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MovieDetailsPageRoutingModule } from './movie-details-routing.module';
 
 import { MovieDetailsPage } from './movie-details.page';
+import { MovieThumbnailComponentModule } from 'src/app/components/movie-thumbnail/movie-thumbnail.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MovieDetailsPageRoutingModule
+    MovieDetailsPageRoutingModule,
+    MovieThumbnailComponentModule
   ],
   declarations: [MovieDetailsPage]
 })

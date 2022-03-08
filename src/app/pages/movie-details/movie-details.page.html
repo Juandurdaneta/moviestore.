@@ -14,12 +14,61 @@
 <!-- <ion-img src="{{movie.background}}"></ion-img> -->
 
 <ion-text color="light">
+  <h4><ion-icon name="play-circle-outline"></ion-icon></h4>
+</ion-text>
+
+<ion-text color="light">
   <h5>{{movie.title}}</h5>
 </ion-text>
 
 <ion-text color="medium">
   <h6>{{movie.genre}}</h6>
 </ion-text>
+
+
+
 </div>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col class="ion-margin-horizontal ion-margin-top">
+      <app-movie-thumbnail [movie]="movie" [clickable]="false"></app-movie-thumbnail>
+    </ion-col>
+    <ion-col >
+      <div class="rating-container">
+        <ion-text color="light"> 
+          <h4>Rating</h4>
+          <p class="rating">8.7</p>
+
+        </ion-text>  
+       </div>
+       <div class="director-container">
+        <ion-text color="light">
+
+          <h4>Director</h4>
+          <p>Jon Watts</p>
+        </ion-text>
+
+      </div>
+
+
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="ion-margin">
+      <div class="plot-container">
+        <ion-text color="light">
+          <h4>Plot</h4>
+          <p>{{movie.overview}}</p>
+        </ion-text>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
 
 </ion-content>

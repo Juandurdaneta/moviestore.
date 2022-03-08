@@ -9,6 +9,8 @@ import { Movie } from 'src/app/movies';
 export class MovieThumbnailComponent implements OnInit {
 
   @Input() movie: Movie;
+  @Input() clickable: boolean;
+
 
   constructor() { }
 
