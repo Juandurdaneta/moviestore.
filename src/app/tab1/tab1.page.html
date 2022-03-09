@@ -13,9 +13,47 @@
 
 <div class="img-container ion-margin-horizontal">
   <ion-text>
-  <h5>The Batman</h5>
+  <h5>Spider-Man: No Way Home</h5>
 </ion-text>
 </div>
+
+
+<div class="ion-margin">
+  <ion-text color="light">Generos</ion-text>
+</div>
+
+
+<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="5"
+    class="mySwiper ion-margin"
+  >
+ 
+ <ng-template swiperSlide  class="genre-container">
+   <div class="genre">
+    <ion-text color="light">Drama</ion-text>
+  </div>
+ </ng-template>
+
+ <ng-template swiperSlide  class="genre-container">
+  <div class="genre">
+   <ion-text color="light">Accion</ion-text>
+ </div>
+</ng-template>
+<ng-template swiperSlide  class="genre-container">
+  <div class="genre">
+   <ion-text color="light">Aventura</ion-text>
+ </div>
+</ng-template>
+<ng-template swiperSlide  class="genre-container">
+  <div class="genre">
+   <ion-text color="light">Terror</ion-text>
+ </div>
+</ng-template>
+
+
+</swiper>
+
 
 <div class="ion-margin d-flex ion-margin-horizontal">
   <ion-text color="light">Peliculas Populares</ion-text>
@@ -24,7 +62,7 @@
 
 <swiper
     [slidesPerView]="3"
-    [spaceBetween]="30"
+    [spaceBetween]="5"
     class="mySwiper ion-margin"
   >
  

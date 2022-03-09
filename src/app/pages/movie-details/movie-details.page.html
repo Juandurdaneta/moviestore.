@@ -13,8 +13,12 @@
 <div class="container" [style.backgroundImage]="'url('+ movie.background +')'">
 <!-- <ion-img src="{{movie.background}}"></ion-img> -->
 
-<ion-text color="light">
-  <h4><ion-icon name="play-circle-outline"></ion-icon></h4>
+<ion-text >
+  <h4>
+    <a href="{{movie.trailer}}">
+    <ion-icon color="light" name="play-circle-outline"></ion-icon>
+    </a>
+  </h4>
 </ion-text>
 
 <ion-text color="light">
@@ -39,7 +43,7 @@
       <div class="rating-container">
         <ion-text color="light"> 
           <h4>Rating</h4>
-          <div class="rating">8.7</div>
+          <div class="rating">{{movie.rating}}</div>
 
         </ion-text>  
        </div>
