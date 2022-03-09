@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'movie-details/:movieId',
     loadChildren: () => import('./pages/movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
+  },
+  {
+    path: 'genres/:genre',
+    loadChildren: () => import('./pages/genres/genres.module').then( m => m.GenresPageModule)
   }
 ];
 @NgModule({
