@@ -19,35 +19,40 @@
 
 
 <div class="ion-margin">
-  <ion-text color="light">Generos</ion-text>
+  <ion-text color="light">Genres</ion-text>
 </div>
 
 
 <swiper
     [slidesPerView]="3"
-    [spaceBetween]="5"
+    [spaceBetween]="10"
     class="mySwiper ion-margin"
   >
  
- <ng-template swiperSlide  class="genre-container">
-   <div class="genre">
+ <ng-template swiperSlide  class="genre-container" >
+   <div class="genre" [routerLink]="['/genres', 'drama']">
     <ion-text color="light">Drama</ion-text>
   </div>
  </ng-template>
 
  <ng-template swiperSlide  class="genre-container">
-  <div class="genre">
-   <ion-text color="light">Accion</ion-text>
+  <div class="genre"  [routerLink]="['/genres', 'action']">
+   <ion-text color="light">Action</ion-text>
  </div>
 </ng-template>
 <ng-template swiperSlide  class="genre-container">
-  <div class="genre">
-   <ion-text color="light">Aventura</ion-text>
+  <div class="genre"  [routerLink]="['/genres', 'adventure']">
+   <ion-text color="light">Adventure</ion-text>
  </div>
 </ng-template>
 <ng-template swiperSlide  class="genre-container">
-  <div class="genre">
-   <ion-text color="light">Terror</ion-text>
+  <div class="genre"  [routerLink]="['/genres', 'horror']">
+   <ion-text color="light">Horror</ion-text>
+ </div>
+</ng-template>
+<ng-template swiperSlide  class="genre-container">
+  <div class="genre"  [routerLink]="['/genres', 'sci-fi']">
+   <ion-text color="light">Sci-Fi</ion-text>
  </div>
 </ng-template>
 
@@ -56,7 +61,7 @@
 
 
 <div class="ion-margin d-flex ion-margin-horizontal">
-  <ion-text color="light">Peliculas Populares</ion-text>
+  <ion-text color="light">Popular Movies</ion-text>
   <div><ion-icon color="secondary" class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
 </div>
 
@@ -67,7 +72,7 @@
   >
  
     
-    <ng-template swiperSlide *ngFor='let movie of movies' >
+    <ng-template swiperSlide *ngFor='let movie of movies | slice:0:6; let i=index ' >
  
       <app-movie-thumbnail [movie]="movie" [clickable]="true"></app-movie-thumbnail>
 
