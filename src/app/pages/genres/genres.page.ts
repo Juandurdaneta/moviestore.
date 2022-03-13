@@ -22,7 +22,7 @@ export class GenresPage implements OnInit {
     this.genre = this.genre.charAt(0).toUpperCase() + this.genre.slice(1) 
 
     this.moviesBySelectedGenre = movies.filter((movie)=>{
-      return movie.genre == this.genre
+      return []
     })
 
     console.log(this.moviesBySelectedGenre)

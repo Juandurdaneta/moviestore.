@@ -19,7 +19,7 @@ export class MovieDetailsPage implements OnInit {
     const movieIdFromRoute = Number(routeParams.get('movieId'));
 
 
-    this.movie = movies.find(movie => movie.id === movieIdFromRoute);
+    this.movie = movies.find(movie => movie.movieId === movieIdFromRoute);
 
   }
 

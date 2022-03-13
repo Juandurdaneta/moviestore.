@@ -64,3 +64,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-weight: 600;
     transform: translate(-50%, -50%);
 }
+
+ion-skeleton-text {
+    --background-rgb: var(--ion-color-medium-rgb);
+}

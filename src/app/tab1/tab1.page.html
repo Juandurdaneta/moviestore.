@@ -65,22 +65,45 @@
   <div><ion-icon color="secondary" class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
 </div>
 
+<div *ngIf="movies">
 <swiper
     [slidesPerView]="3"
     [spaceBetween]="5"
     class="mySwiper ion-margin"
   >
  
-    
     <ng-template swiperSlide *ngFor='let movie of movies | slice:0:6; let i=index ' >
  
       <app-movie-thumbnail [movie]="movie" [clickable]="true"></app-movie-thumbnail>
 
     </ng-template>  
-  
 
-  </swiper>
+</swiper>
+</div>
 
- 
+<div *ngIf="!movies">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col>
+            <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col>
+            <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+              <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-thumbnail>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</div>
+
+
+
 
 </ion-content>
