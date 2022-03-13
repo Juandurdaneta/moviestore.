@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Movie, movies } from 'src/app/movies';
+import { Movie } from 'src/app/movies';
 
 @Component({
   selector: 'app-genres',
@@ -21,9 +21,7 @@ export class GenresPage implements OnInit {
     
     this.genre = this.genre.charAt(0).toUpperCase() + this.genre.slice(1) 
 
-    this.moviesBySelectedGenre = movies.filter((movie)=>{
-      return []
-    })
+    this.moviesBySelectedGenre = []
 
     console.log(this.moviesBySelectedGenre)
 
