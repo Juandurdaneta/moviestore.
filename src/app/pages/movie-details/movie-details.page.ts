@@ -33,7 +33,6 @@ export class MovieDetailsPage implements OnInit {
     .subscribe(
       async(res) => {
         this.movie = res.foundMovie
-        console.log(this.movie)
       },
       async(res) =>{
         console.log(res.error)

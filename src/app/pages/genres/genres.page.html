@@ -18,7 +18,7 @@
 
     <div *ngFor="let movie of moviesBySelectedGenre" >
       
-        <ion-col [routerLink]="['/movie-details', movie.id]" class="ion-text-center poster-container">
+        <ion-col [routerLink]="['/movie-details', movie.movieId]" class="ion-text-center poster-container">
          <ion-text color="light" ><img src="{{movie.background}}" /></ion-text> 
         </ion-col>
       

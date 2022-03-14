@@ -16,4 +16,8 @@ export class MovieService {
     return this.http.get(`http://127.0.0.1:4000/movies/${movieId}`)
   }
 
+  getMoviesByGenre(genre: String): Observable<any>{
+    return this.http.get(`http://127.0.0.1:4000/movies/genre/${genre}`)
+  }
+
 }

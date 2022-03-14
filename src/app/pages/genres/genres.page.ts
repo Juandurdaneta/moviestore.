@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/movies';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-genres',
@@ -12,7 +13,10 @@ export class GenresPage implements OnInit {
   genre: String | undefined;
   moviesBySelectedGenre: Array<Movie> | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private movieService: MovieService
+    ) { }
 
   ngOnInit() {
 
@@ -21,12 +25,23 @@ export class GenresPage implements OnInit {
     
     this.genre = this.genre.charAt(0).toUpperCase() + this.genre.slice(1) 
 
-    this.moviesBySelectedGenre = []
+    this.getMovies(this.genre)
 
-    console.log(this.moviesBySelectedGenre)
 
   
 
+  }
+
+  getMovies(genre){
+    this.movieService.getMoviesByGenre(genre)
+    .subscribe(
+      async (res) => {
+        this.moviesBySelectedGenre = res.foundMovies
+      },
+      async (res) => {
+        console.log(res.error)
+      }
+    )
   }
 
 }
