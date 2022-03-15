@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<ion-content>
+
+  <div class="ion-margin ion-padding">
+    <ion-text color="light" class="ion-text-center">
+      <h1>Welcome!</h1>
+    </ion-text>
+    <ion-text color="medium" class="ion-text-center">
+      <p>Join the biggest movie community</p>
+    </ion-text>
+
+  
+    <form>
+      <ion-input color="light" type="email" class="ion-padding" placeholder="Email"></ion-input>
+      <ion-input color="light" type="text" class="ion-padding" placeholder="Username"></ion-input>
+      <ion-input color="light" type="password" class="ion-padding" placeholder="Password"></ion-input>
+      <ion-button color="secondary" expand="block" type="submit">Sign up</ion-button>
+    </form>
+  
+    <ion-text color="medium" class="ion-text-center">
+      <p>Already a member? <ion-text color="secondary" [routerLink]="['/login']"> Sign In</ion-text></p> 
+    </ion-text>
+  
+  </div>
+
+
+</ion-content>
