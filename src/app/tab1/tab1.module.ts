@@ -7,6 +7,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { SwiperModule } from 'swiper/angular';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { MovieThumbnailComponentModule } from '../components/movie-thumbnail/movie-thumbnail.module';
+import { HeaderComponentModule } from '../components/header/header.module';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -15,7 +17,8 @@ import { MovieThumbnailComponentModule } from '../components/movie-thumbnail/mov
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
     SwiperModule,
-    MovieThumbnailComponentModule
+    MovieThumbnailComponentModule,
+    HeaderComponentModule
   ],
   declarations: [Tab1Page]
 })

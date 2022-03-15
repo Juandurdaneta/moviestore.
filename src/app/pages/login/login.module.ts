@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GenresPageRoutingModule } from './genres-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { GenresPage } from './genres.page';
+import { LoginPage } from './login.page';
 import { HeaderComponentModule } from 'src/app/components/header/header.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { HeaderComponentModule } from 'src/app/components/header/header.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    GenresPageRoutingModule,
+    LoginPageRoutingModule,
     HeaderComponentModule
   ],
-  declarations: [GenresPage]
+  declarations: [LoginPage]
 })
-export class GenresPageModule {}
+export class LoginPageModule {}
