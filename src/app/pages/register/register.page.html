@@ -11,7 +11,7 @@
     </ion-text>
 
   
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
       <ion-input color="light" type="email" class="ion-padding" placeholder="Email" formControlName="email"></ion-input>
       <ion-input color="light" type="text" class="ion-padding" placeholder="Username" formControlName="username"></ion-input>
       <ion-input color="light" type="password" class="ion-padding" placeholder="Password" formControlName="password"></ion-input>

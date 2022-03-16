@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,9 @@ export class LoginPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    public toastController: ToastController,
+    private router : Router
   ) { }
 
   ngOnInit() {
@@ -44,10 +48,29 @@ export class LoginPage implements OnInit {
     .subscribe(
       async (res)=>{
         console.log(res)
+
+
+        res.status !== 200 && this.presentToast(res.message, res.status)
+
+        if(res.status == 200){
+          this.authService.storeToken(res.token);
+          this.router.navigateByUrl('/profile', {replaceUrl: true})
+        }
+       
+        
       }
     )
   }
 
+
+  async presentToast(message, status) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000,
+      color: status == 200 ? "success" : "danger"
+    });
+    toast.present();
+  }
 
 
 }
