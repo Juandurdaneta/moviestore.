@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,22 +9,45 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginPage implements OnInit {
 
-  loginForm = this.formBuilder.group({
-    email: '',
-    password: ''
-  })
+  loginForm: FormGroup 
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      email: '',
+      password: ''
+    })
   }
 
-  onSubmit(): void {
-    console.log('form submitted!')
-    console.log(this.loginForm.value)
+  get email() {
+    return this.loginForm.get('email')
   }
+
+  get password() {
+    return this.loginForm.get('password')
+  }
+
+
+  async login(){
+    console.log('loading...')
+    let myForm: FormData = new FormData();
+    myForm.append("email", this.loginForm.get('email').value)
+    myForm.append("password", this.loginForm.get('password').value)
+
+
+
+    this.authService.login(myForm)
+    .subscribe(
+      async (res)=>{
+        console.log(res)
+      }
+    )
+  }
+
 
 
 }

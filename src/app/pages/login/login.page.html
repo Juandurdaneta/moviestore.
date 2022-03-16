@@ -8,7 +8,7 @@
     <p>Log in to access the best movie database available!</p>
   </ion-text>
 
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-input color="light" type="email" class="ion-padding" placeholder="Email" formControlName="email"></ion-input>
     <ion-input color="light" type="password" class="ion-padding" placeholder="Password" formControlName="password"></ion-input>
     <ion-button color="secondary" expand="block" type="submit">Sign in</ion-button>
