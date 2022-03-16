@@ -11,10 +11,10 @@
     </ion-text>
 
   
-    <form>
-      <ion-input color="light" type="email" class="ion-padding" placeholder="Email"></ion-input>
-      <ion-input color="light" type="text" class="ion-padding" placeholder="Username"></ion-input>
-      <ion-input color="light" type="password" class="ion-padding" placeholder="Password"></ion-input>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <ion-input color="light" type="email" class="ion-padding" placeholder="Email" formControlName="email"></ion-input>
+      <ion-input color="light" type="text" class="ion-padding" placeholder="Username" formControlName="username"></ion-input>
+      <ion-input color="light" type="password" class="ion-padding" placeholder="Password" formControlName="password"></ion-input>
       <ion-button color="secondary" expand="block" type="submit">Sign up</ion-button>
     </form>
   
