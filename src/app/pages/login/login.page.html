@@ -8,9 +8,9 @@
     <p>Log in to access the best movie database available!</p>
   </ion-text>
 
-  <form>
-    <ion-input color="light" type="email" class="ion-padding" placeholder="Email"></ion-input>
-    <ion-input color="light" type="password" class="ion-padding" placeholder="Password"></ion-input>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-input color="light" type="email" class="ion-padding" placeholder="Email" formControlName="email"></ion-input>
+    <ion-input color="light" type="password" class="ion-padding" placeholder="Password" formControlName="password"></ion-input>
     <ion-button color="secondary" expand="block" type="submit">Sign in</ion-button>
   </form>
 
