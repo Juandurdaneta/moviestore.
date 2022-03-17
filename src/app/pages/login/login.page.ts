@@ -21,10 +21,16 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if(this.authService.isAuthenticated){
+      this.router.navigate(['profile'])
+    }
+
     this.loginForm = this.formBuilder.group({
       email: '',
       password: ''
     })
+
   }
 
   get email() {

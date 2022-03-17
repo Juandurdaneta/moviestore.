@@ -9,12 +9,30 @@ export class AuthService {
 
   baseUrl: String = 'http://127.0.0.1:4000/users'
   token: string;
-  isAuthenticated: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
+  isAuthenticated: boolean
 
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) { 
+    this.checkToken()
+  }
+
+
+  private checkToken() {
+    this.token = localStorage.getItem('TOKEN')
+    if (this.token && !this.tokenExpired(this.token)) {
+      this.isAuthenticated = true
+    } else {
+      this.isAuthenticated = false
+    }
+  }
+
+
+  private tokenExpired(token: string) {
+    const expiry = (JSON.parse(atob(token.split('.')[1]))).exp;
+    return (Math.floor((new Date).getTime() / 1000)) >= expiry;
+  }
 
 
   login(formData: FormData): Observable<any>{
@@ -29,7 +47,9 @@ export class AuthService {
   storeToken(token: string){
     localStorage.setItem('TOKEN', token);
     this.token = token
-    this.isAuthenticated.next(true)
+    this.isAuthenticated = true
+
+    console.log(this.isAuthenticated)
   }
 
 }

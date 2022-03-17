@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -19,10 +20,16 @@ export class RegisterPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private router: Router
   ) { }
 
   ngOnInit() {
+
+    if(this.authService.isAuthenticated){
+      this.router.navigate(['profile'])
+    }
+
   }
 
   async register(){
