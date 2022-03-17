@@ -35,6 +35,7 @@ export class Tab1Page implements OnInit {
 
   doRefresh(event: any) {
     this.getAllMovies()
+    console.log('refreshed')
     event.target.complete();
   }
 

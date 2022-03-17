@@ -36,7 +36,7 @@ export class RegisterPage implements OnInit {
     console.log("loading...")
     let myForm: FormData = new FormData();
     myForm.append("email", this.registerForm.get('email').value)
-    myForm.append("username", this.registerForm.get('email').value)
+    myForm.append("username", this.registerForm.get('username').value)
     myForm.append("password", this.registerForm.get('password').value)
 
     this.authService.register(myForm)
