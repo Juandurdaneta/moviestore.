@@ -3,22 +3,21 @@
 
       <div class="review-header">
         
-        <div class="review-by">
+        <div *ngIf="review && author" class="review-by">
           <ion-text>
-          <h5>Juandurdaneta</h5>
-          <p>March 7, 2022</p>
+          <h5>{{author.username}}</h5>
+          <p>{{releaseDateLocaleString}}</p>
 
           </ion-text>
         </div>
 
         <div class="rating">
-          <h5>10/10</h5>
+          <h5>{{review.rating}}/10</h5>
         </div>
 
     </div>
       <div class="review">
-          <p>The digital animation geniuses at Pixar are back with “Turning Red” and it marks a departure for the studio known for the “Toy Story” and.... <span class="color-secondary"> Read Full Review</span>
-        </p>
+          <p>{{review.comment}}</p>
       </div>
     
   </div>

@@ -18,6 +18,9 @@ export class UserService {
       return this.http.get(`${this.baseUrl}`, this.userHeader() )
     }
 
+    getUserById(userId: Number) : Observable<any>{
+      return this.http.get(`${this.baseUrl}/${userId}` )
+    }
 
     userHeader(){
       var header = {

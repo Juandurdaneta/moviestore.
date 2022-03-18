@@ -81,7 +81,16 @@
   </ion-row>
 
   <div *ngIf="reviews">
-  <app-review-card></app-review-card>
+    <!-- <ng-template  *ngFor='let review of reviews ' >
+      <h1></h1>
+      <app-review-card [review]="review"></app-review-card>
+    </ng-template> -->
+
+
+    <div *ngFor="let review of reviews">
+      <app-review-card [review]="review"></app-review-card>
+    </div>
+
   </div>
 
   <div *ngIf="!reviews" class="ion-margin-horizontal">

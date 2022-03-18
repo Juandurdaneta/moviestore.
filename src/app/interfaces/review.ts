@@ -3,5 +3,6 @@ export interface Review {
     userId: Number,
     comment: String,
     rating: Number,
-    upvotes: Number
+    upvotes: Number,
+    releaseDate: Date
 }
