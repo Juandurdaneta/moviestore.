@@ -9,7 +9,14 @@
 
 <ion-content [fullscreen]="true" >
 
+
 <div *ngIf="movie">
+
+  <ion-refresher slot="fixed" color='light' (ionRefresh)="doRefresh($event, movie.movieId)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
   <div class="container" [ngStyle]="{'background-image': 'url(' + movie.background + ')'}">
   <ion-img src="{{movie.background}}"></ion-img>
 

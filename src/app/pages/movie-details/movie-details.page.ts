@@ -65,4 +65,11 @@ export class MovieDetailsPage implements OnInit {
     )
   }
 
+  doRefresh(event: any, movieId) {
+    this.getMovie(movieId)
+    this.getReviews(movieId)
+    event.target.complete();
+  }
+
+
 }
