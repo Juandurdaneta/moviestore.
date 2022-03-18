@@ -7,14 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class ReviewService {
 
-  baseUrl : String = 'http://127.0.0.1:4000';
+  baseUrl : String = 'http://127.0.0.1:4000/reviews';
 
   constructor(private http: HttpClient) { }
 
   getAllReviewsOfMovie(id: number): Observable<any>{
-    return this.http.get(`${this.baseUrl}/reviews/${id}`)
+    return this.http.get(`${this.baseUrl}/${id}`)
   } 
 
-  
+  postReview(formData: FormData): Observable<any>{
+    return this.http.post<any>(`${this.baseUrl}/`, formData)
+  }
+
 
 }
