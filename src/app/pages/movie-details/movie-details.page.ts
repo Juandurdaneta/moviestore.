@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/movies';
 import { AuthService } from 'src/app/services/auth.service';
 import { MovieService } from 'src/app/services/movie.service';
+import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -16,7 +17,8 @@ export class MovieDetailsPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private movieService: MovieService,
-    private authService: AuthService
+    private authService: AuthService,
+    private reviewService : ReviewService
     ) { }
 
     
@@ -30,6 +32,8 @@ export class MovieDetailsPage implements OnInit {
     console.log(this.isAuthenticated)
 
     this.getMovie(movieIdFromRoute)
+    this.getReviews(movieIdFromRoute)
+
 
   }
 
@@ -43,6 +47,18 @@ export class MovieDetailsPage implements OnInit {
       async(res) =>{
         console.log(res.error)
       }
+    )
+  }
+
+  getReviews(movieId){
+    this.reviewService.getAllReviewsOfMovie(movieId)
+    .subscribe(
+     async (res) => {
+       console.log(res)
+     },
+     async(res)=>{
+       console.log(res.error)
+     }
     )
   }
 
