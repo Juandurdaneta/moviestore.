@@ -70,12 +70,30 @@
     </ion-col>
   </ion-row>
 
+  <ion-row>
+    <ion-col class="ion-margin-horizontal">
+      <div>
+        <ion-text color="light">
+          <h4>Reviews</h4>
+        </ion-text>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <app-review-card></app-review-card>
+  <app-review-card></app-review-card>
+  <app-review-card></app-review-card>
+  
+
+  <ion-button color="secondary" class="ion-margin" expand="block">Write Review</ion-button>
+
+
 </ion-grid>
 </div>
 
 
 <div *ngIf="!movie">
- 
+  
 </div>
 
 

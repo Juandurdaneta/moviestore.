@@ -22,6 +22,7 @@ export class Tab1Page implements OnInit{
 
 
   ngOnInit(){
+    this.getAllMovies()
   }
 
   getAllMovies(){
@@ -29,7 +30,6 @@ export class Tab1Page implements OnInit{
     .subscribe(
       async(res) => {
         this.movies = res.foundMovies
-        console.log(this.movies)
 
       },
       async(res) =>{
