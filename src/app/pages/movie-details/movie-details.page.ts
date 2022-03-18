@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Review } from 'src/app/interfaces/review';
 import { Movie } from 'src/app/movies';
 import { AuthService } from 'src/app/services/auth.service';
 import { MovieService } from 'src/app/services/movie.service';
@@ -13,6 +14,7 @@ import { ReviewService } from 'src/app/services/review.service';
 export class MovieDetailsPage implements OnInit {
 
   movie: Movie | undefined;
+  reviews: Review[] | undefined;
   isAuthenticated: boolean = false
   constructor(
     private route: ActivatedRoute,
@@ -54,8 +56,8 @@ export class MovieDetailsPage implements OnInit {
     this.reviewService.getAllReviewsOfMovie(movieId)
     .subscribe(
      async (res) => {
-       console.log(res)
-     },
+      res.status == 200 ? this.reviews = res.foundReviews : this.reviews 
+    },
      async(res)=>{
        console.log(res.error)
      }

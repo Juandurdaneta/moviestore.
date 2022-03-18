@@ -79,10 +79,18 @@
       </div>
     </ion-col>
   </ion-row>
-  <app-review-card></app-review-card>
-  <app-review-card></app-review-card>
-  <app-review-card></app-review-card>
 
+  <div *ngIf="reviews">
+  <app-review-card></app-review-card>
+  </div>
+
+  <div *ngIf="!reviews" class="ion-margin-horizontal">
+    <ion-text color="light">
+      <p>No reviews found for this movie...</p>
+    </ion-text>
+  </div>
+
+  <br/>
 
 <div *ngIf="isAuthenticated">
 
