@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/movies';
+import { AuthService } from 'src/app/services/auth.service';
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
@@ -11,10 +12,11 @@ import { MovieService } from 'src/app/services/movie.service';
 export class MovieDetailsPage implements OnInit {
 
   movie: Movie | undefined;
-
+  isAuthenticated: boolean = false
   constructor(
     private route: ActivatedRoute,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private authService: AuthService
     ) { }
 
     
@@ -22,6 +24,10 @@ export class MovieDetailsPage implements OnInit {
 
     const routeParams = this.route.snapshot.paramMap;
     const movieIdFromRoute = Number(routeParams.get('movieId'));
+
+    this.isAuthenticated = this.authService.isAuthenticated
+
+    console.log(this.isAuthenticated)
 
     this.getMovie(movieIdFromRoute)
 

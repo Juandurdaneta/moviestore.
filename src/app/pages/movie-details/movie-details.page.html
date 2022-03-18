@@ -79,14 +79,24 @@
       </div>
     </ion-col>
   </ion-row>
+  <app-review-card></app-review-card>
+  <app-review-card></app-review-card>
+  <app-review-card></app-review-card>
 
-  <app-review-card></app-review-card>
-  <app-review-card></app-review-card>
-  <app-review-card></app-review-card>
-  
+
+<div *ngIf="isAuthenticated">
 
   <ion-button color="secondary" class="ion-margin" expand="block">Write Review</ion-button>
+</div>
 
+
+<div *ngIf="!isAuthenticated">
+
+  <ion-text color="light" class="ion-text-center">
+    <ion-button color="secondary" class="ion-margin" expand="block">Log in to review this movie</ion-button>
+  </ion-text>
+
+</div>
 
 </ion-grid>
 </div>
