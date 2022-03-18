@@ -28,4 +28,42 @@
 
     </div>
 
+
+    <div *ngIf="!user">
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-thumbnail style="width: 6rem; height: 6rem; border-radius: 25px; margin:auto;">
+                  <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-thumbnail>
+                <br />
+                <ion-thumbnail style="width: 60%; border-radius: 25px; margin:auto;">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                  </ion-thumbnail>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        <br/>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+                  <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col>
+                <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+                  <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col>
+                <ion-thumbnail style="width: 6.7rem; height: 9.5rem; border-radius: 25px">
+                  <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-thumbnail>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+    </div>
+
 </ion-content>
