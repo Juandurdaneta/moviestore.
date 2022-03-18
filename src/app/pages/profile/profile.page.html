@@ -1,5 +1,23 @@
 <app-header></app-header>
 
 <ion-content>
+    <ion-refresher slot="fixed" color='light' (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      
+    <div *ngIf="user">
+        <div class=" profile-picture" [ngStyle]="{'background-image': 'url(' + user.profileImage + ')'}">
+        </div>
+
+        <div class="ion-margin text-center">
+            <ion-text color="light" class="ion-text-center">
+                <h4>{{user.username}}</h4>
+            </ion-text>
+
+
+
+        </div>
+
+    </div>
 
 </ion-content>

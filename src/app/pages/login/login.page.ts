@@ -60,7 +60,8 @@ export class LoginPage implements OnInit {
 
         if(res.status == 200){
           this.authService.storeToken(res.token);
-          this.router.navigateByUrl('/profile', {replaceUrl: true})
+          this.router.navigate(['home'])
+
         }
        
         

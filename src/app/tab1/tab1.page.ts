@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { Movie } from '../movies';
 import { MovieService } from '../services/movie.service';
 @Component({
@@ -6,19 +7,21 @@ import { MovieService } from '../services/movie.service';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page implements OnInit {
+export class Tab1Page implements OnInit{
   
   movies : Movie[]
 
 
   constructor(
-    private movieService : MovieService
-  ) {}
+    private movieService : MovieService,
+    private router: Router
+  ) {
+    
+  }
 
 
 
   ngOnInit(){
-    this.getAllMovies();
   }
 
   getAllMovies(){
@@ -26,6 +29,8 @@ export class Tab1Page implements OnInit {
     .subscribe(
       async(res) => {
         this.movies = res.foundMovies
+        console.log(this.movies)
+
       },
       async(res) =>{
         console.log(res.error)
