@@ -31,7 +31,6 @@ export class MovieDetailsPage implements OnInit {
 
     this.isAuthenticated = this.authService.isAuthenticated
 
-    console.log(this.isAuthenticated)
 
     this.getMovie(movieIdFromRoute)
     this.getReviews(movieIdFromRoute)
@@ -58,7 +57,6 @@ export class MovieDetailsPage implements OnInit {
     .subscribe(
      async (res) => {
       res.status == 200 ? this.reviews = res.foundReviews : this.reviews 
-    console.log(this.reviews)
 
     },
      async(res)=>{

@@ -29,7 +29,6 @@ export class ReviewCardComponent implements OnInit {
 
     this.getAuthor(this.review.userId);
 
-    console.log(this.author)
 
   }
 
@@ -38,7 +37,6 @@ export class ReviewCardComponent implements OnInit {
     .subscribe(
       async(res)=>{
         this.author = res.foundUser;
-        console.log(this.author)
       }
     )
   }

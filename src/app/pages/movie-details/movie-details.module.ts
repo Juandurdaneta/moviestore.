@@ -9,6 +9,7 @@ import { MovieDetailsPageRoutingModule } from './movie-details-routing.module';
 import { MovieDetailsPage } from './movie-details.page';
 import { MovieThumbnailComponentModule } from 'src/app/components/movie-thumbnail/movie-thumbnail.module';
 import { ReviewCardComponentModule } from 'src/app/components/review-card/review-card.module';
+import { RatingComponentModule } from 'src/app/components/rating/rating.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ReviewCardComponentModule } from 'src/app/components/review-card/review
     IonicModule,
     MovieDetailsPageRoutingModule,
     MovieThumbnailComponentModule,
-    ReviewCardComponentModule
+    ReviewCardComponentModule,
+    RatingComponentModule
   ],
   declarations: [MovieDetailsPage]
 })

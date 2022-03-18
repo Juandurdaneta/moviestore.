@@ -2,7 +2,7 @@ export interface Review {
     movieId: Number,
     userId: Number,
     comment: String,
-    rating: Number,
+    rating: number,
     upvotes: Number,
     releaseDate: Date
 }

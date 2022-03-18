@@ -41,8 +41,12 @@
       <div class="rating-container">
         <ion-text color="light"> 
           <h4>Rating</h4>
-          <div class="rating">8.7</div>
-
+            <div *ngIf="reviews">
+            <app-rating [reviews]="reviews"></app-rating>
+            </div>
+            <div *ngIf="!reviews">
+              <app-rating></app-rating>
+              </div>
         </ion-text>  
        </div>
        <div class="director-container">
@@ -81,11 +85,6 @@
   </ion-row>
 
   <div *ngIf="reviews">
-    <!-- <ng-template  *ngFor='let review of reviews ' >
-      <h1></h1>
-      <app-review-card [review]="review"></app-review-card>
-    </ng-template> -->
-
 
     <div *ngFor="let review of reviews">
       <app-review-card [review]="review"></app-review-card>
