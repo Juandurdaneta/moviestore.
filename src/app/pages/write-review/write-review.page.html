@@ -7,12 +7,9 @@
           </ion-text>
 
 
-          <form>
-            <ion-textarea clearOnEdit="true" placeholder="Review"></ion-textarea>
-
-            
-            <ion-input color="light" type="number" class="ion-padding" min="1" max="10" placeholder="Score" ></ion-input>
-
+          <form [formGroup]="reviewForm" (ngSubmit)="publish(movieIdFromRoute, userId)">
+            <ion-textarea clearOnEdit="true" placeholder="Review"  formControlName="comment"></ion-textarea>
+            <ion-input color="light" type="number" class="ion-padding" min="1" max="10" placeholder="Score"  formControlName="calification"></ion-input>
             <ion-button color="secondary" expand="block" type="submit">Post Review</ion-button>
           </form>
 

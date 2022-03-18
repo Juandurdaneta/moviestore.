@@ -6,8 +6,8 @@
       </ion-refresher>
       
     <div *ngIf="user">
-        <div class=" profile-picture" [ngStyle]="{'background-image': 'url(' + user.profileImage + ')'}">
-        </div>
+        <ion-avatar class=" profile-picture" [ngStyle]="{'background-image': 'url(' + user.profileImage + ')'}">
+        </ion-avatar>
 
         <div class="ion-margin ion-text-center">
             <ion-text color="light">

@@ -18,6 +18,7 @@ export class UserService {
       return this.http.get(`${this.baseUrl}`, this.userHeader() )
     }
 
+
     userHeader(){
       var header = {
         headers: new HttpHeaders()
