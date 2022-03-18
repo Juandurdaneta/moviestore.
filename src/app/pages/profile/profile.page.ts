@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ProfilePage implements OnInit {
 
-  user: User
+  user: User 
 
   constructor(
     private authService: AuthService,
@@ -20,6 +20,7 @@ export class ProfilePage implements OnInit {
   ) { }
 
   ngOnInit() {
+    
     if(this.authService.isAuthenticated){
       this.getUserInfo()
     } else {

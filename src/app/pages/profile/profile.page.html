@@ -9,14 +9,22 @@
         <div class=" profile-picture" [ngStyle]="{'background-image': 'url(' + user.profileImage + ')'}">
         </div>
 
-        <div class="ion-margin text-center">
-            <ion-text color="light" class="ion-text-center">
+        <div class="ion-margin ion-text-center">
+            <ion-text color="light">
                 <h4>{{user.username}}</h4>
             </ion-text>
-
-
+            
+            <ion-button color="secondary" expand="block">Edit Profile</ion-button>
+              
 
         </div>
+
+
+        <div class="ion-margin reviews">
+            <ion-text color="medium"><h5>Your reviews</h5></ion-text>
+         
+        </div>
+        
 
     </div>
 
