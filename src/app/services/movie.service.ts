@@ -6,18 +6,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MovieService {
 
+  baseUrl: String = 'https://api-moviestore.herokuapp.com/movies'
+
   constructor(private http: HttpClient) { }
 
   getAllMovies(): Observable<any>{
-    return this.http.get('http://127.0.0.1:4000/movies')
+    return this.http.get(`${this.baseUrl}`)
   }
 
   getMovie(movieId: Number): Observable<any>{
-    return this.http.get(`http://127.0.0.1:4000/movies/${movieId}`)
+    return this.http.get(`${this.baseUrl}/${movieId}`)
   }
 
   getMoviesByGenre(genre: String): Observable<any>{
-    return this.http.get(`http://127.0.0.1:4000/movies/genre/${genre}`)
+    return this.http.get(`${this.baseUrl}/genre/${genre}`)
   }
 
 }

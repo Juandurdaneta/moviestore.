@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
 
-  baseUrl: String = 'http://127.0.0.1:4000/users'
+  baseUrl: String = 'https://api-moviestore.herokuapp.com/users'
   token: string;
   isAuthenticated: boolean
 

@@ -56,7 +56,7 @@
 
 <div class="ion-margin d-flex ion-margin-horizontal">
   <ion-text color="light">Popular Movies</ion-text>
-  <div><ion-icon color="secondary" class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
+  <div [routerLink]="['/movies']"><ion-icon color="secondary" class='ion-margin-horizontal' name="chevron-forward-outline"></ion-icon></div>
 </div>
 
 <div *ngIf="movies">

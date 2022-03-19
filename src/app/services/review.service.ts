@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ReviewService {
 
-  baseUrl : String = 'http://127.0.0.1:4000/reviews';
+  baseUrl : String = 'https://api-moviestore.herokuapp.com/reviews';
 
   constructor(private http: HttpClient) { }
 

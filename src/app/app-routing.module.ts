@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'write-review/:movieId',
     loadChildren: () => import('./pages/write-review/write-review.module').then( m => m.WriteReviewPageModule)
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)
   }
 ];
 @NgModule({
